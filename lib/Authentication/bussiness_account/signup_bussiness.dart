@@ -1,3 +1,5 @@
+import 'package:blockchain_project/dashboard/bussiness_dashboard/bussiness_dashboard.dart';
+import 'package:blockchain_project/shared_screens/Functionalities/all_functionalities.dart';
 import 'package:flutter/material.dart';
 
 class bussSignupForm extends StatefulWidget {
@@ -15,6 +17,7 @@ class _bussSignupFormState extends State<bussSignupForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.purple,
       appBar: AppBar(
         backgroundColor: Colors.purple,
@@ -31,9 +34,12 @@ class _bussSignupFormState extends State<bussSignupForm> {
       body: Form(
         key: _formkey,
         child: Padding(
-          padding: const EdgeInsets.only(left: 50.0,right: 50.0,top: 20,bottom: 20),
+          padding: const EdgeInsets.only(left: 50.0,right: 50.0),
           child: Column(
             children: <Widget>[
+              Center(
+                  child: Image_fun(),
+              ),
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
@@ -47,6 +53,7 @@ class _bussSignupFormState extends State<bussSignupForm> {
               ),
               TextFormField(
                 decoration: InputDecoration(
+                  contentPadding: new EdgeInsets.symmetric(vertical: -8.0,horizontal: 25),
                   fillColor: Colors.white,
                   filled: true,
                   border: OutlineInputBorder(
@@ -74,6 +81,7 @@ class _bussSignupFormState extends State<bussSignupForm> {
               ),
               TextFormField(
                 decoration: InputDecoration(
+                  contentPadding: new EdgeInsets.symmetric(vertical: -8.0,horizontal: 25),
                   fillColor: Colors.white,
                   filled: true,
                   border: OutlineInputBorder(
@@ -99,6 +107,7 @@ class _bussSignupFormState extends State<bussSignupForm> {
               ),
               TextFormField(
                 decoration: InputDecoration(
+                  contentPadding: new EdgeInsets.symmetric(vertical: -8.0,horizontal: 25),
                   fillColor: Colors.white,
                   filled: true,
                   border: OutlineInputBorder(
@@ -131,10 +140,8 @@ class _bussSignupFormState extends State<bussSignupForm> {
                       primary: Colors.yellow,
                     ),
                     onPressed: () {
-                      if (!_formkey.currentState.validate()) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Processing Data')),
-                        );
+                      if (_formkey.currentState.validate()) {
+                       To_Page(context,bussiness_dashboard());
                       }
                     },
                   ),

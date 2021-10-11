@@ -1,3 +1,5 @@
+import 'package:blockchain_project/Authentication/bussiness_account/gen_or_res_page_bussiness.dart';
+import 'package:blockchain_project/Authentication/personal_account/gen_or_res_page_personal.dart';
 import 'package:blockchain_project/shared_screens/Functionalities/all_functionalities.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -88,7 +90,7 @@ class _account_typeState extends State<account_type> {
                 primary: Colors.yellow,
               ),  
                 onPressed: (){
-                  To_gen_or_res_per(context);
+                  To_Page(context,GetOrResPer());
                 },
             ),
             SizedBox(
@@ -110,7 +112,7 @@ class _account_typeState extends State<account_type> {
                 ),
               ),
               onPressed: (){
-                  To_gen_or_res_buss(context);
+                  To_Page(context,GenOrResBuss());
               },
             )
 

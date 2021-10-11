@@ -1,3 +1,4 @@
+import 'package:blockchain_project/Authentication/personal_account/signup_personal.dart';
 import 'package:blockchain_project/shared_screens/Functionalities/all_functionalities.dart';
 import 'package:blockchain_project/shared_screens/auth_shared/account_type.dart';
 import 'package:flutter/cupertino.dart';
@@ -79,7 +80,7 @@ class _GetOrResPerState extends State<GetOrResPer> {
                   primary: Colors.yellow,
                 ),
                 onPressed: () {
-                  To_personal_signup(context);
+                  To_Page(context,perSignupForm());
                 }
             ),
             SizedBox(

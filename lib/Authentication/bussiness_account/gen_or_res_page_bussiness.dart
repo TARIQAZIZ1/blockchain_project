@@ -1,3 +1,4 @@
+import 'package:blockchain_project/Authentication/bussiness_account/signup_bussiness.dart';
 import 'package:blockchain_project/shared_screens/Functionalities/all_functionalities.dart';
 import 'package:blockchain_project/shared_screens/auth_shared/account_type.dart';
 import 'package:flutter/cupertino.dart';
@@ -79,7 +80,7 @@ class _GenOrResBussState extends State<GenOrResBuss> {
                   primary: Colors.yellow,
                 ),
                 onPressed: () {
-                  To_bussiness_signup(context);
+                  To_Page(context,bussSignupForm());
                 }
             ),
             SizedBox(
